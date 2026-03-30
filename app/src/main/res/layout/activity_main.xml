@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#121212">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ekran Kaydedici"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hazır"
+        android:textSize="16sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Kaydı Başlat ●"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#43A047"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıtlar: Movies/ScreenRecorder/"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_marginTop="48dp"/>
+
+</LinearLayout>

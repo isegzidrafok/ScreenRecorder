@@ -1,0 +1,33 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodları indir
+        uses: actions/checkout@v3
+
+      - name: Java 11 kur
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Gradle wrapper izinleri
+        run: chmod +x gradlew
+
+      - name: Debug APK derle
+        run: ./gradlew assembleDebug
+
+      - name: APK'yı yükle (Artifacts)
+        uses: actions/upload-artifact@v3
+        with:
+          name: ScreenRecorder-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
